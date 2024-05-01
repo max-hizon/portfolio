@@ -1,0 +1,26 @@
+---
+interface Props {
+  codeName: string;
+ //icon: string;
+}
+
+const {codeName, /*icon */} = Astro.props;
+---
+<div class="pill">
+  <!-- <img src={icon}>-->
+  {codeName}
+</div>
+
+<style>
+  .pill{
+    background-color: rgb(230, 230, 230);
+    max-width: 1000px;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: 15px 5px;
+    color: black;
+    font-weight: 500;
+    display: flex;
+  }
+</style>
