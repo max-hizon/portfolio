@@ -1,21 +1,15 @@
----
-import { Image } from 'astro:assets';
-import headshot from '../assets/max-dp.jpg';
----
 
 <div class="relative flex items-center gap-x-4">
-    <Image 
-    src={headshot}
-    densities={[1, 2, 3]}
-    alt="Developers's headshot"
-    class="h-12 w-12"
-    />
- 
   <div class="text-lg leading-6">
-    <h1 class="font-semibold text-primary text-xl header-text">
+    <h1 class="font-semibold text-primary text-6xl header-text">
       <span class="absolute inset-0"></span>
       Maximo Hizon
     </h1>
-    <p class="paragraph-text">Full Stack Developer</p>
+    <p class="paragraph-text text-spacing text-3xl">Full Stack Developer</p>
   </div>
 </div>
+<style>
+.text-spacing{
+  margin-top: 12px;
+}
+</style>

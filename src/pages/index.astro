@@ -12,7 +12,18 @@ import NodeLogo from "../assets/node-logo.png";
 import VueLogo from "../assets/vue-logo.png";
 import AngLogo from "../assets/angular-logo.png";
 import MySQL from "../assets/mysql-logo.png";
-import MaxPFP from "../assets/max-pfp-2.jpg"
+import MaxPFP from "../assets/max-pfp-2.jpg";
+import CPPLogo from "../assets/cpp-logo.png";
+import JavaLogo from "../assets/java-logo.png";
+import PythonLogo from "../assets/python-logo.png";
+import DjangoLogo from "../assets/django-logo.png";
+import Postgres from "../assets/postgresql-logo.png";
+import htmlLogo from "../assets/html-logo.png";
+import cssLogo from "../assets/css3-logo.png";
+import Creatizens from "../assets/Creatizens.png";
+import InforLogo from "../assets/Infor.png";
+import Cynder from "../assets/Cynder.png";
+import Ateneo from "../assets/Ateneo.jpg";
 //Professional Work Components
 import Project from "../components/Project.astro";
 //Project Components
@@ -43,6 +54,8 @@ import Project from "../components/Project.astro";
         <h3 class="text-xl mt-6 font-medium lg:text-3xl tracking-tight text-primary header-text">Primary</h3>
         <div class="pillGroup">
           <Pill icon={JSLogo.src} codeName="Javascript" />
+          <Pill icon={htmlLogo.src} codeName="HTML5" />
+          <Pill icon={cssLogo.src} codeName="CSS3" />
           <Pill icon={React.src}codeName="React" />
           <Pill icon={NodeLogo.src}codeName="Node.js" />
           <Pill icon={VueLogo.src}codeName="Vue" />
@@ -51,7 +64,11 @@ import Project from "../components/Project.astro";
         </div>
         <h3 class="text-xl mt-6 font-medium lg:text-3xl tracking-tight text-primary header-text">Secondary</h3>
         <div class="pillGroup">
-          <Pill codeName="Test"/>
+          <Pill icon={CPPLogo.src} codeName="C++"/>
+          <Pill icon={JavaLogo.src} codeName="Java"/>
+          <Pill icon={PythonLogo.src} codeName="Python"/>
+          <Pill icon={DjangoLogo.src} codeName="Django"/>
+          <Pill icon={Postgres.src} codeName="PostgreSQL"/>
         </div>
       </div>
 
@@ -98,18 +115,21 @@ import Project from "../components/Project.astro";
         <br>
         <div>
           <div>
+            <img class="work-icon" src={Creatizens.src}>
             <h3 class="industry mb-2 text-2xl font-bold tracking-tight header-text"> Creatizens Corp: Full Stack Software Developer Apprentice (April '24 - Present)</h3>
           </div>
         </div>
         <br>
         <div>
           <div>
+            <img class="work-icon" src={InforLogo.src}>
             <h3 class="industry mb-2 text-2xl font-bold tracking-tight header-text"> Infor: Development and Quality Assurance Intern (August '23 - November '23)</h3>
           </div>
         </div>
         <br>
         <div>
           <div>
+            <img class="work-icon" src={Cynder.src}>
             <h3 class="industry mb-2 text-2xl font-bold tracking-tight header-text"> Cynder: Web Development Intern (June '22 - August '22)</h3>
           </div>
         </div>
@@ -122,8 +142,9 @@ import Project from "../components/Project.astro";
       </h2>
       <br>
       <div class="block-margin-bottom">
+        <img class="work-icon" src={Ateneo.src}>
         <h3 class="industry mb-2 text-2xl font-bold tracking-tight header-text"> BS Computer Science</h3>
-        <p class="mt-4 text-lg paragraph-text just-text">
+        <p class="mt-4 text-xl paragraph-text just-text">
           Ateneo de Manila University
         </p>
       </div>
@@ -170,8 +191,8 @@ import Project from "../components/Project.astro";
   }
 
   .work-icon {
-    max-width: 60px;
-    max-height: 60px;
+    max-width: 50px;
+    max-height: 50px;
   }
 
   .block-margin-bottom{
