@@ -11,7 +11,7 @@ interface Props {
 const { title, body, tags, github, live, href } = Astro.props;
 ---
 
-<div class="border-2 border-gray-700 border-zinc-900">
+<div class="border-2 border-blue">
   <slot />
   <div class="p-5">
     {
@@ -19,7 +19,7 @@ const { title, body, tags, github, live, href } = Astro.props;
         <a href={href}>
           <h5
             transition:name="project-title"
-            class="industry mb-2 text-2xl font-bold tracking-tight text-white underline"
+            class="industry mb-2 text-2xl font-bold tracking-tight header-text underline"
           >
             {title}
           </h5>
@@ -30,19 +30,19 @@ const { title, body, tags, github, live, href } = Astro.props;
       !href && (
         <h5
           transition:name="project-title"
-          class="mb-2 text-2xl font-bold tracking-tight text-white industry"
+          class="mb-2 text-2xl font-bold tracking-tight header-text industry"
         >
           {title}
         </h5>
       )
     }
 
-    <p class="mt-4 text-zinc-500 dark:text-zinc-400 md:max-w-xs lg:max-w-none">{body}</p>
+    <p class="mt-4 paragraph-text md:max-w-xs lg:max-w-none">{body}</p>
     {
       href && (
         <a
           href={href}
-          class="mt-6 inline-flex items-center font-medium text-sm px-5 py-2.5 industry font-medium text-center text-white bg-white-700 hover:bg-white-800 focus:ring-4 focus:outline-none focus:ring-white-300 dark:bg-white-600 dark:hover:bg-white-700 dark:focus:ring-white-800 bg-zinc-800"
+          class="mt-6 inline-flex items-center font-medium text-sm px-5 py-2.5 industry font-medium text-center header-text bg-white-700 hover:bg-white-800 focus:ring-4 focus:outline-none focus:ring-white-300 dark:bg-white-600 dark:hover:bg-white-700 dark:focus:ring-white-800 bg-zinc-800 button-color"
         >
           Read more
           <svg
@@ -170,5 +170,13 @@ const { title, body, tags, github, live, href } = Astro.props;
     .projects-column > div:nth-child(1) {
       margin-bottom: 1rem;
     }
+  }
+
+  .button-color{
+    background-color: rgb(51, 106, 177)
+  }
+
+  .border-blue{
+    border-color: rgb(19, 53, 99);
   }
 </style>
