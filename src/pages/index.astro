@@ -3,7 +3,9 @@ import Layout from "../layouts/Layout.astro";
 
 import Card from "../components/Card.astro";
 import Heading from "../components/Heading.astro";
-import CustomImageScroll from "../components/CustomImageScroll.astro";
+import Infor from "../assets/Infor.png";
+import Cynder from "../assets/Cynder.png";
+import Creatizens from "../assets/Creatizens.png";
 import Pill from "../components/Pill.astro";
 
 //Professional Work Components
@@ -14,10 +16,10 @@ import Anaren from "../components/Anaren.astro";
 <Layout title="Maximo Hizon">
   <div id="contents">
     <main class="container">
-      <div class="mb-16">
+      <div>
         <Heading />
         <h2
-        class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary dark:text-white">Skills</h2>
+        class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary header-text">Skills</h2>
         <div class="pillGroup">
           <Pill codeName="Javascript" />
           <Pill codeName="React" />
@@ -26,49 +28,63 @@ import Anaren from "../components/Anaren.astro";
           <Pill codeName="Angular" />
         </div>
       </div>
-      <div class="mb-16">
+      <div class="block-margin-bottom">
         <h2
-          class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary dark:text-white"
+          class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary header-text"
         >
           Experience
         </h2>
         <br>
         <div>
           <div>
-            <h3 class="industry mb-2 text-2xl font-bold tracking-tight text-white"> Infor: Development and Quality Assurance Intern (August '23 - November '23)</h3>
+            <img src={Creatizens.src} class="work-icon">
+            <h3 class="industry mb-2 text-2xl font-bold tracking-tight header-text"> Creatizens Corp: Full Stack Software Developer Apprenticeship (April '24 - Present)</h3>
           </div>
-          <p class="mt-4 text-lg text-zinc-500 dark:text-zinc-400 just-text">
+          <p class="mt-4 text-lg paragraph-text just-text">
+            Developing an electronic wallet and community-based social application ~~~
+          </p>
+        </div>
+        <br>
+        <br>
+        <div>
+          <div>
+            <img src={Infor.src} class="work-icon">
+            <h3 class="industry mb-2 text-2xl font-bold tracking-tight header-text"> Infor: Development and Quality Assurance Intern (August '23 - November '23)</h3>
+          </div>
+          <p class="mt-4 text-lg paragraph-text just-text">
             Worked on the company’s software component library used for the development of ERP systems and software. Applied bug fixes to each component found through quality assurance and added enhancements to the components. These additions were based on reviews and suggestions by clients and users through tickets submitted onto the team’s sprint board. Development updates, fixes, and changes to library components using JavaScript, HTML, and SCSS with Github version control. Participated in scrum ceremonies as part of the development team’s agile process. Conducted manual testing, specifically smoke and regression testing. Reviewed Cypress as a test automation tool for the library components. Submitted issues within the component library on Github for bug fixing. Performed peer reviews of updated versions of the components to test for potential bugs.
           </p>
         </div>
         <br>
         <div>
           <div>
-            <h3 class="industry mb-2 text-2xl font-bold tracking-tight text-white"> Cynder: Web Development Intern (June '22 - August '22)</h3>
+            <img src={Cynder.src} class="work-icon">
+            <h3 class="industry mb-2 text-2xl font-bold tracking-tight header-text"> Cynder: Web Development Intern (June '22 - August '22)</h3>
           </div>
-          <p class="mt-4 text-lg text-zinc-500 dark:text-zinc-400 just-text">
+          <p class="mt-4 text-lg paragraph-text just-text">
             Managed user and admin information using the company’s custom content management system (CMS) database and integrated the data to the organization’s website using the CMS’s API and Node.js. Updated company website design and structure based on business requirements defined in Jira and the requirements specified by the development team leader. Delivered features and enhancements to the website using HTML, CSS, and Javascript with the React.js framework. Updated the company user database structure using Node.js and MySQL. Participated in scrum ceremonies as part of the development team’s agile process.
           </p>
         </div>
       </div>
 
       <h2
-        class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary dark:text-white mb-2"
+        class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary header-text mb-2"
       >
         Education
       </h2>
-      <div>
-        <h3 class="industry mb-2 text-2xl font-bold tracking-tight text-white"> BS Computer Science</h3>
-        <p class="mt-4 text-lg text-zinc-500 dark:text-zinc-400 just-text">
+      <div class="block-margin-bottom">
+        <h3 class="industry mb-2 text-2xl font-bold tracking-tight header-text"> BS Computer Science</h3>
+        <p class="mt-4 text-lg paragraph-text just-text">
           Ateneo de Manila University
         </p>
       </div>
       
       <h2
-        class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary dark:text-white mb-2"
+        class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary header-text mb-2"
       >
         Projects
       </h2>
+      <br>
       <div class="mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="">
           <Card
@@ -96,6 +112,22 @@ import Anaren from "../components/Anaren.astro";
     color: white;
     line-height: 1.6;
   }
+
+  .work-icon {
+    max-width: 60px;
+    max-height: 60px;
+  }
+
+  .block-margin-bottom{
+    margin-bottom: 45px;
+  }
+  .paragraph-text{
+    color: rgb(122, 160, 209);
+   }
+
+   .header-text{
+    color: rgb(152, 196, 255);
+   }
   .project-image {
     max-width: 100% !important;
     overflow: hidden;
@@ -185,6 +217,10 @@ import Anaren from "../components/Anaren.astro";
   }
   .just-text {
     text-align: justify;
+  }
+
+  .border-dark-blue{
+    border-color: rgb(16, 59, 116);
   }
 </style>
 
