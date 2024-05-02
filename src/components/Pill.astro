@@ -1,13 +1,13 @@
 ---
 interface Props {
   codeName: string;
- //icon: string;
+  icon: string;
 }
 
-const {codeName, /*icon */} = Astro.props;
+const {codeName, icon } = Astro.props;
 ---
 <div class="pill">
-  <!-- <img src={icon}>-->
+  <img class="icon-pic" src={icon}>
   {codeName}
 </div>
 
@@ -16,11 +16,20 @@ const {codeName, /*icon */} = Astro.props;
     background-color: rgb(17, 98, 204);
     max-width: 1000px;
     text-align: center;
-    padding: 5px 10px;
-    border-radius: 20px;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 25px;
     margin: 15px 5px;
-    color: rgb(165, 207, 255);;
+    color: rgb(165, 207, 255);
     font-weight: 500;
     display: flex;
+    align-items: center;
+    
+  }
+
+  .icon-pic {
+    max-width: 20px;
+    max-height: 20px;
+    margin-right: 5px;
   }
 </style>

@@ -6,7 +6,13 @@ import Heading from "../components/Heading.astro";
 import Pill from "../components/Pill.astro";
 import Bentasell from '../assets/Bentasell.png';
 import Pixie from '../assets/Pixie.png';
-
+import JSLogo from "../assets/js-logo.png";
+import React from "../assets/react-logo.png";
+import NodeLogo from "../assets/node-logo.png";
+import VueLogo from "../assets/vue-logo.png";
+import AngLogo from "../assets/angular-logo.png";
+import MySQL from "../assets/mysql-logo.png";
+import MaxPFP from "../assets/max-pfp-2.jpg"
 //Professional Work Components
 import Project from "../components/Project.astro";
 //Project Components
@@ -17,14 +23,35 @@ import Project from "../components/Project.astro";
     <main class="container">
       <div>
         <Heading />
+          <div class="intro-content">
+            <div class="intro-text">
+              <h1 class="text-4xl mt-6 font-medium lg:text-5xl tracking-tight text-primary header-text mb-2">Who Am I?</h1>
+              <br>
+              <p class="paragraph-text text-primary text-2xl">
+                Hi! I'm Max, a Software Developer who primarily works with Web Applications using Javascript and its
+                different libraries and frameworks. I also try to program using other langauges such as Java and C++ 
+                on the side, and I know a little bit of Python. When I'm not building apps, I'm playing video games
+                and music. You can get in touch with me <a href="#" class="link-line">here </a>
+              </p>
+            </div>
+            <div>
+              <img class="profile-pic" src={MaxPFP.src}>
+            </div>
+          </div>
         <h2
-        class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary header-text">Skills</h2>
+        class="text-3xl mt-6 font-medium lg:text-5xl tracking-tight text-primary header-text">Skills</h2>
+        <h3 class="text-xl mt-6 font-medium lg:text-3xl tracking-tight text-primary header-text">Primary</h3>
         <div class="pillGroup">
-          <Pill codeName="Javascript" />
-          <Pill codeName="React" />
-          <Pill codeName="Node.js" />
-          <Pill codeName="Vue" />
-          <Pill codeName="Angular" />
+          <Pill icon={JSLogo.src} codeName="Javascript" />
+          <Pill icon={React.src}codeName="React" />
+          <Pill icon={NodeLogo.src}codeName="Node.js" />
+          <Pill icon={VueLogo.src}codeName="Vue" />
+          <Pill icon={AngLogo.src}codeName="Angular" />
+          <Pill icon={MySQL.src}codeName="MySQL" />
+        </div>
+        <h3 class="text-xl mt-6 font-medium lg:text-3xl tracking-tight text-primary header-text">Secondary</h3>
+        <div class="pillGroup">
+          <Pill codeName="Test"/>
         </div>
       </div>
 
@@ -113,6 +140,29 @@ import Project from "../components/Project.astro";
     color: white;
     line-height: 1.6;
   }
+  .intro-text{
+    margin: auto;
+  }
+  .intro-content{
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+    margin-bottom: 75px;
+
+  }
+  .profile-pic{
+    max-height: 500px;
+    max-width: 300px;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px 0 rgba(116, 188, 255, 0.575), 0 6px 20px 0 rgba(116, 188, 255, 0.575);
+    margin-left: 40px;
+  }
+
+  .pic-container {
+    margin-left: 10px;
+  }
   .image-container{
     width: 350px;
     max-height: 175px;
@@ -186,6 +236,10 @@ import Project from "../components/Project.astro";
   }
   .instructions strong {
     color: rgb(var(--accent-light));
+  }
+
+  .link-line {
+    text-decoration: underline;
   }
   .link-card-grid {
     display: grid;
