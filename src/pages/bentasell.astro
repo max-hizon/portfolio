@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BackButton from "../components/BackButton.astro";
+import AnarenSamples from "../components/AnarenSamples.astro";
+import Bentasell from "../assets/Bentasell.png";
+---
+
+<Layout title="bentaSell">
+  <div class="max-w-screen-md m-auto p-4 my-4 antialiased">
+    <h1 class="mb-4 text-3xl font-extrabold leading-tight header-text lg:mb-6 lg:text-4xl dark:text-white">
+      React Project (WIP) <br /><span class="text-gradient"
+        >bentaSell</span>
+    </h1>
+
+    <AnarenSamples projectImage={Bentasell.src}/>
+    <br>
+    <p class="lead paragraph-text">
+      BentaSell is an application that manages an organization's inventory. It acts as a
+      warehouse management system to assist in managing a company's products.
+    </p>
+        <br>
+        <p class="paragraph-text">The application was built uses React for its frontend and MySQL
+          for its database management system. </p>
+
+    <BackButton />
+</div>
+</Layout>
+
+<style>
+</style>
+

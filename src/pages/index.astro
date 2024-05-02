@@ -12,7 +12,7 @@ import Pixie from '../assets/Pixie.png';
 import Ateneo from '../assets/Ateneo.jpg';
 
 //Professional Work Components
-import Anaren from "../components/Anaren.astro";
+import Project from "../components/Project.astro";
 //Project Components
 ---
 
@@ -41,26 +41,26 @@ import Anaren from "../components/Anaren.astro";
       <div class="mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="">
           <Card
-            href="anaren"
+            href="bentasell"
             title="bentaSell"
             body="An inventory management system (WIP)"
             tags="Drupal, PHP, JavaScript, CSS, HTML"
           >
             <div class="max-w-full image-container">
-              <Anaren image={Bentasell.src} />
+              <Project image={Bentasell.src} />
             </div>
           </Card>
         </div>
 
         <div class="">
           <Card
-            href="anaren"
+            href="pixie"
             title="Pixie Dust Enterprises"
-            body="An inventory tracker"
+            body="An inventory and transactions tracker"
             tags="Drupal, PHP, JavaScript, CSS, HTML"
           >
             <div class="max-w-full image-container">
-              <Anaren image={Pixie.src} />
+              <Project image={Pixie.src} />
             </div>
           </Card>
         </div>
@@ -135,13 +135,7 @@ import Anaren from "../components/Anaren.astro";
   .block-margin-bottom{
     margin-bottom: 45px;
   }
-  .paragraph-text{
-    color: rgb(69, 122, 184);
-   }
 
-   .header-text{
-    color: rgb(165, 207, 255);
-   }
   .project-image {
     max-width: 100% !important;
     overflow: hidden;

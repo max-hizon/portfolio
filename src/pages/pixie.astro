@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BackButton from "../components/BackButton.astro";
+import AnarenSamples from "../components/AnarenSamples.astro";
+import Pixie from '../assets/Pixie.png';
+---
+
+<Layout title="Pixie Dust Enterprises">
+  <div class="max-w-screen-md m-auto p-4 my-4 antialiased">
+    <h1 class="mb-4 text-3xl font-extrabold leading-tight header-text lg:mb-6 lg:text-4xl dark:text-white">
+      Python Project <br /><span class="text-gradient"
+        >Pixie Dust Enterprises</span>
+    </h1>
+
+    <AnarenSamples projectImage={Pixie.src}/>
+    <br>
+    <p class="lead paragraph-text">
+      Pixie Dust Enterprises is an inventory and transactions tracker application. The prototype is built in Python
+      using Tkinter for the GUI, a PostgreSQL database, and psycopg2 to interface with the database.
+    </p>
+        <br>
+        <p class="paragraph-text">The overall system is designed to keep track of the operations in Pixie Dust Enterprise,
+          specifically its inventory, and transactions. The main entities involved here are the orders, products,
+          agents, and customers.
+          The customers are assigned to their respective sales agents and the orders that they place.
+          Orders are also linked to the products included in them, the agent handling the transaction, and the
+          customer that placed it. The orders' relationship with products also includes the description, discount,
+          quantity, and total cost of that product. This organization ensures that the orders are properly assigned
+          to a customer and the respective agent that is assigned to that customer and that each order keeps
+          track of the products that are included in them</p>
+
+    <BackButton />
+</div>
+</Layout>
+
+<style>
+</style>
+

@@ -1,17 +1,15 @@
 ---
-const items = [
-  "./anaren-images/1-thumb.png",
-  "./anaren-images/2-thumb.png",
-  "./anaren-images/3-thumb.png",
-];
+
+interface Props {
+  projectImage: string;
+}
+
+const {projectImage} = Astro.props
+
 ---
 
 <div class="sample">
-  {
-    items.map((item) => (
-        <img loading="lazy" class="sample" src={item} alt="Anaren sample " />
-    ))
-  }
+  <img class="proj-pic" src={projectImage}>
 </div>
 
 <style>
@@ -20,6 +18,10 @@ const items = [
     justify-content: center;
     gap: 12px;
     cursor: auto;
+    overflow: hidden;
+  }
+  .proj-pic{
+    max-height: 500px;
   }
   @media (max-width: 768px) {
     .sample {
