@@ -1,10 +1,19 @@
 
 ---
-import Bentasell from '../assets/Bentasell.png'
+interface Props {
+  image: string;
+}
+
+const {image} = Astro.props;
 ---
 <img
-  class="border  border-dark-blue"
-  src={Bentasell.src}
+  class="border border-dark-blue image-sizing"
+  src={image}
 >
 
-<style></style>
+<style>
+  .image-sizing{
+    max-height: 300px;
+    max-width: auto;
+  }
+</style>

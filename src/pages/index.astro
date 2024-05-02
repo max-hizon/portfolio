@@ -7,6 +7,9 @@ import Infor from "../assets/Infor.png";
 import Cynder from "../assets/Cynder.png";
 import Creatizens from "../assets/Creatizens.png";
 import Pill from "../components/Pill.astro";
+import Bentasell from '../assets/Bentasell.png';
+import Pixie from '../assets/Pixie.png';
+import Ateneo from '../assets/Ateneo.jpg';
 
 //Professional Work Components
 import Anaren from "../components/Anaren.astro";
@@ -43,8 +46,21 @@ import Anaren from "../components/Anaren.astro";
             body="An inventory management system (WIP)"
             tags="Drupal, PHP, JavaScript, CSS, HTML"
           >
-            <div class="max-w-full">
-              <Anaren />
+            <div class="max-w-full image-container">
+              <Anaren image={Bentasell.src} />
+            </div>
+          </Card>
+        </div>
+
+        <div class="">
+          <Card
+            href="anaren"
+            title="Pixie Dust Enterprises"
+            body="An inventory tracker"
+            tags="Drupal, PHP, JavaScript, CSS, HTML"
+          >
+            <div class="max-w-full image-container">
+              <Anaren image={Pixie.src} />
             </div>
           </Card>
         </div>
@@ -60,7 +76,7 @@ import Anaren from "../components/Anaren.astro";
         <div>
           <div>
             <img src={Creatizens.src} class="work-icon">
-            <h3 class="industry mb-2 text-2xl font-bold tracking-tight header-text"> Creatizens Corp: Full Stack Software Developer Apprenticeship (April '24 - Present)</h3>
+            <h3 class="industry mb-2 text-2xl font-bold tracking-tight header-text"> Creatizens Corp: Full Stack Software Developer Apprentice (April '24 - Present)</h3>
           </div>
         </div>
         <br>
@@ -84,7 +100,9 @@ import Anaren from "../components/Anaren.astro";
       >
         Education
       </h2>
+      <br>
       <div class="block-margin-bottom">
+        <img src={Ateneo.src} class="work-icon">
         <h3 class="industry mb-2 text-2xl font-bold tracking-tight header-text"> BS Computer Science</h3>
         <p class="mt-4 text-lg paragraph-text just-text">
           Ateneo de Manila University
@@ -103,6 +121,11 @@ import Anaren from "../components/Anaren.astro";
     color: white;
     line-height: 1.6;
   }
+  .image-container{
+    width: 350px;
+    max-height: 175px;
+    overflow: hidden;
+  }
 
   .work-icon {
     max-width: 60px;
@@ -113,11 +136,11 @@ import Anaren from "../components/Anaren.astro";
     margin-bottom: 45px;
   }
   .paragraph-text{
-    color: rgb(122, 160, 209);
+    color: rgb(69, 122, 184);
    }
 
    .header-text{
-    color: rgb(152, 196, 255);
+    color: rgb(165, 207, 255);
    }
   .project-image {
     max-width: 100% !important;
