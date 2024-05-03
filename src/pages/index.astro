@@ -35,6 +35,7 @@ import Ateneo from "../assets/Ateneo.jpg";
 //Professional Work Components
 import Project from "../components/Project.astro";
 //Project Components
+import Introduction from "../components/Introduction.astro"
 ---
 
 <Layout title="Maximo Hizon">
@@ -46,12 +47,7 @@ import Project from "../components/Project.astro";
             <div class="intro-text">
               <h1 class="text-4xl mt-6 font-medium lg:text-5xl tracking-tight text-primary header-text mb-2">Who Am I?</h1>
               <br>
-              <p class="paragraph-text text-primary text-2xl">
-                Hi! I'm Max, a Software Developer who primarily works with Web Applications using Javascript and its
-                different libraries and frameworks. I also try to program using other langauges such as Java and C++ 
-                on the side, and I know a little bit of Python. When I'm not building apps, I'm playing video games
-                and music. You can get in touch with me <a href="#" class="link-line">here </a>
-              </p>
+              <Introduction />
             </div>
             <div>
               <img class="profile-pic" src={MaxPFP.src}>
