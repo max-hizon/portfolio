@@ -2,11 +2,11 @@
 import directus from "../lib/directus.js";
 import {readSingleton} from "@directus/sdk";
 
-const description = await directus.request(readSingleton("Description"))
+const summary = await directus.request(readSingleton("Summary"))
 ---
 
 <div class="intro-text">
   <p class="paragraph-text text-primary text-2xl">
-    {description.content}
+    {summary.description}
   </p>
 </div>
