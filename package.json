@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/vercel": "^7.5.4",
     "@directus/sdk": "^15.1.0",
     "@sentry/astro": "^7.93.0",
     "astro": "^4.5.2",
