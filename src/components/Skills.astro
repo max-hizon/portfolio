@@ -13,7 +13,7 @@ const logos =  await directus.request(readItems(skillset));
 
 ---
 
-<div class="pillGroup">
+<div class="pillGroup handle-overflow">
   {logos.map((logo) => (
     <Pill icon={`https://max-portfolio.directus.app/assets/${logo.icon}`} codeName={logo.language} />
   ))}
