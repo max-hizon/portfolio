@@ -1,0 +1,25 @@
+---
+import directus from "../lib/directus.js";
+import { readItems } from "@directus/sdk";
+
+const icons = await directus.request(readItems('work_experience'));
+
+
+---
+
+<div>
+  {icons.map((icon) => (
+    <div class="exp-spacing">
+      <img class="work-icon" src={`https://max-portfolio.directus.app/assets/${icon.company_logo}`}>
+      <h3 class="industry mb-2 text-2xl font-bold tracking-tight header-text "> {icon.company}</h3>
+      <h3 class="industry mb-2 text-xl font-bold paragraph-text"> {icon.role}</h3>
+      <p class="mt-4 text-xl paragraph-text just-text">{icon.period}</p>
+    </div>
+  ))}
+</div>
+
+<style>
+  .exp-spacing {
+    margin-bottom: 25px;
+  }
+</style>

@@ -1,0 +1,9 @@
+---
+import directus from "../lib/directus.js";
+import {readSingleton} from "@directus/sdk";
+
+const summary = await directus.request(readSingleton("summary"))
+---
+<div>
+  <img class="profile-pic" src={`https://max-portfolio.directus.app/assets/${summary.profile_pic}`}>
+</div>

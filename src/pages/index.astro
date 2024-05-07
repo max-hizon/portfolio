@@ -20,6 +20,8 @@ import Ateneo from "../assets/Ateneo.jpg";
 
 //Professional Work Components
 import Project from "../components/Project.astro";
+import ProfilePicture from "../components/ProfilePicture.astro";
+import Experience from "../components/Experience.astro";
 
 ---
 
@@ -34,9 +36,7 @@ import Project from "../components/Project.astro";
               <br>
               <Introduction />
             </div>
-            <div>
-              <img class="profile-pic" src={MaxPFP.src}>
-            </div>
+            <ProfilePicture />
           </div>
         <h2
         class="text-3xl mt-6 font-medium lg:text-5xl tracking-tight text-primary header-text">Skills</h2>
@@ -88,25 +88,7 @@ import Project from "../components/Project.astro";
         </h2>
         <br>
         <div>
-          <div>
-            <img class="work-icon" src={Creatizens.src}>
-            <h3 class="industry mb-2 text-2xl font-bold tracking-tight header-text"> Creatizens Corp: Full Stack Software Developer Apprentice (April '24 - Present)</h3>
-          </div>
-        </div>
-        <br>
-        <div>
-          <div>
-            <img class="work-icon" src={InforLogo.src}>
-            <h3 class="industry mb-2 text-2xl font-bold tracking-tight header-text"> Infor: Development and Quality Assurance Intern (August '23 - November '23)</h3>
-          </div>
-        </div>
-        <br>
-        <div>
-          <div>
-            <img class="work-icon" src={Cynder.src}>
-            <h3 class="industry mb-2 text-2xl font-bold tracking-tight header-text"> Cynder: Web Development Intern (June '22 - August '22)</h3>
-          </div>
-        </div>
+          <Experience />
       </div>
 
       <h2
@@ -114,8 +96,7 @@ import Project from "../components/Project.astro";
       >
         Education
       </h2>
-      <br>
-      <div class="block-margin-bottom">
+      <div class="block-margin-bottom block-margin-top">
         <img class="work-icon" src={Ateneo.src}>
         <h3 class="industry mb-2 text-2xl font-bold tracking-tight header-text"> BS Computer Science</h3>
         <p class="mt-4 text-xl paragraph-text just-text">
@@ -165,12 +146,17 @@ import Project from "../components/Project.astro";
   }
 
   .work-icon {
-    max-width: 50px;
-    max-height: 50px;
+    max-width: 55px;
+    max-height: 55px;
+    border-radius: 20px;
+    margin-bottom: 5px;
   }
 
   .block-margin-bottom{
     margin-bottom: 45px;
+  }
+  .block-margin-top{
+    margin-top: 25px;
   }
 
   .project-image {
