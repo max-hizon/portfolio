@@ -5,26 +5,12 @@ import MaxPFP from "../assets/max-pfp.jpg";
 // Components
 import Card from "../components/Card.astro";
 import Heading from "../components/Heading.astro";
-import Pill from "../components/Pill.astro";
+import Introduction from "../components/Introduction.astro";
+import Skills from "../components/Skills.astro";
 
 // Project Images
 import Bentasell from '../assets/Bentasell.png';
 import Pixie from '../assets/Pixie.png';
-
-// Programming Icons
-import JSLogo from "../assets/js-logo.png";
-import React from "../assets/react-logo.png";
-import NodeLogo from "../assets/node-logo.png";
-import VueLogo from "../assets/vue-logo.png";
-import AngLogo from "../assets/angular-logo.png";
-import MySQL from "../assets/mysql-logo.png";
-import CPPLogo from "../assets/cpp-logo.png";
-import JavaLogo from "../assets/java-logo.png";
-import PythonLogo from "../assets/python-logo.png";
-import DjangoLogo from "../assets/django-logo.png";
-import Postgres from "../assets/postgresql-logo.png";
-import htmlLogo from "../assets/html-logo.png";
-import cssLogo from "../assets/css3-logo.png";
 
 // Work Icons
 import Creatizens from "../assets/Creatizens.png";
@@ -34,8 +20,7 @@ import Ateneo from "../assets/Ateneo.jpg";
 
 //Professional Work Components
 import Project from "../components/Project.astro";
-//Project Components
-import Introduction from "../components/Introduction.astro"
+
 ---
 
 <Layout title="Maximo Hizon">
@@ -56,24 +41,9 @@ import Introduction from "../components/Introduction.astro"
         <h2
         class="text-3xl mt-6 font-medium lg:text-5xl tracking-tight text-primary header-text">Skills</h2>
         <h3 class="text-xl mt-6 font-medium lg:text-3xl tracking-tight text-primary header-text">Primary</h3>
-        <div class="pillGroup">
-          <Pill icon={JSLogo.src} codeName="Javascript" />
-          <Pill icon={htmlLogo.src} codeName="HTML5" />
-          <Pill icon={cssLogo.src} codeName="CSS3" />
-          <Pill icon={React.src}codeName="React" />
-          <Pill icon={NodeLogo.src}codeName="Node.js" />
-          <Pill icon={VueLogo.src}codeName="Vue" />
-          <Pill icon={AngLogo.src}codeName="Angular" />
-          <Pill icon={MySQL.src}codeName="MySQL" />
-        </div>
+          <Skills skillset="language_icons"/>
         <h3 class="text-xl mt-6 font-medium lg:text-3xl tracking-tight text-primary header-text">Secondary</h3>
-        <div class="pillGroup">
-          <Pill icon={CPPLogo.src} codeName="C++"/>
-          <Pill icon={JavaLogo.src} codeName="Java"/>
-          <Pill icon={PythonLogo.src} codeName="Python"/>
-          <Pill icon={DjangoLogo.src} codeName="Django"/>
-          <Pill icon={Postgres.src} codeName="PostgreSQL"/>
-        </div>
+          <Skills skillset="language_icons_2"/>
       </div>
 
       <h2

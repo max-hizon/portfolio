@@ -1,0 +1,20 @@
+---
+import directus from "../lib/directus.js";
+import { readItems } from "@directus/sdk";
+import Pill from "./Pill.astro";
+
+interface Props {
+  skillset: string;
+}
+
+const {skillset} = Astro.props
+
+const logos =  await directus.request(readItems(skillset));
+
+---
+
+<div class="pillGroup">
+  {logos.map((logo) => (
+    <Pill icon={`https://max-portfolio.directus.app/assets/${logo.icon}`} codeName={logo.language} />
+  ))}
+</div>

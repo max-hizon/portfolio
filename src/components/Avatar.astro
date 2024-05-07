@@ -1,11 +1,16 @@
+---
+import directus from "../lib/directus.js";
+import {readSingleton} from "@directus/sdk";
 
+const summary = await directus.request(readSingleton("summary"))
+---
 <div class="relative flex items-center gap-x-4">
   <div class="text-lg leading-6">
     <h1 class="font-semibold text-primary text-6xl header-text">
       <span class="absolute inset-0"></span>
-      Maximo Hizon
+      {summary.name}
     </h1>
-    <p class="paragraph-text text-spacing text-3xl">Full Stack Developer</p>
+    <p class="paragraph-text text-spacing text-3xl">{summary.role}</p>
   </div>
 </div>
 <style>
